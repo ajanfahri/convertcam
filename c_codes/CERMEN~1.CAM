@@ -1,0 +1,411 @@
+BD
+SET_METRIC
+C
+BEGIN_EINRICHTEPLAN_INFO
+C
+ZA,MM,20
+MM,AT,1,  10,1,1,,'Maschine'                         ,,'',T
+MM,AT,1,  20,1,1,,'Typ'                              ,,'',Z
+MM,AT,1,  30,1,1,,'Steuerung'                        ,,'',T
+MM,AT,1,  40,1,1,,'Variante'                         ,,'',Z
+MM,AT,1,  50,1,1,,'Firma'                            ,,'',T
+MM,AT,1,  60,1,1,,'Programmnummer'                   ,,'',T
+MM,AT,1,  70,1,1,,'Bearbeiter'                       ,,'',T
+MM,AT,1,  80,1,1,,'Datum'                            ,,'',T
+MM,AT,1,  90,1,1,,'Auftragsname'                     ,,'',T
+MM,AT,1, 100,1,1,,'Anzahl der Programmdurchlaeufe'   ,,'',Z
+MM,AT,1, 110,1,1,,'Tafelname'                        ,,'',T
+MM,AT,1, 120,1,1,,'Speicherbedarf'                   ,,'',Z
+MM,AT,1, 130,1,1,,'Material-ID'                      ,,'',T
+MM,AT,1, 140,1,1,,'Tafelgewicht'                     ,,'kg',Z
+MM,AT,1, 150,1,1,,'Maschinenzeit'                    ,,'min',Z
+MM,AT,1, 160,1,1,,'Bemerkung'                        ,,'',T
+MM,AT,1, 170,1,1,,'Flag Automatisiert'               ,,'Bool',Z
+MM,AT,1, 180,1,1,,'Flag ToPsxxx-Programm'            ,,'Bool',Z
+MM,AT,1, 190,1,1,,'Einrichteplanfilename'            ,,'',T
+MM,AT,1, 200,1,1,,'Lagergutbezeichnung'              ,,'',T
+C
+ZA,DA,1
+DA,'L3050',1,'Sin 840D',1,'Trumpf','CERMEN_4_25_1','User',26.12.2005,
+*  'CERMEN_4_25',1,
+*  'E:\CAD\N\NURI_CELEP\2005\17_11\10MM\CERMEN_4_25_1.LST',1991,'St37-40',
+*  7,1.57,'  ',0,1,
+*  'E:\CAD\N\NURI_CELEP\2005\17_11\10MM\CERMEN_4_25_1.HTML',''
+C
+ENDE_EINRICHTEPLAN_INFO
+C
+BEGIN_SHEET_TECH
+C
+ZA,MM,9
+MM,AT,1,  10,1,1,,'Tabellenidentifikator'            ,,'',T
+MM,AT,1,  20,1,1,,'Blechmass X'                      ,,'mm',Z
+MM,AT,1,  30,1,1,,'Blechmass Y'                      ,,'mm',Z
+MM,AT,1,  40,1,1,,'Blechmass Z'                      ,,'mm',Z
+MM,AT,1, 200,1,1,,'TRUMPF-Kennung'                   ,,'',Z
+MM,AT,1, 220,1,1,,'Blechmass X real'                 ,,'mm',Z
+MM,AT,1, 230,1,1,,'Blechmass Y real'                 ,,'mm',Z
+MM,AT,1, 240,1,1,,'Materialkennung'                  ,,'',T
+MM,AT,1, 260,1,1,,'Werkstoffdichte'                  ,,'kg/dm3',Z
+C
+ZA,DA,1
+DA,'SHT-1',285.00,770.00,4.00,1,285.00,770.00,St37-60,7.900   
+C
+ENDE_SHEET_TECH
+C
+BEGIN_SHEET_LOAD
+C
+ZA,MM,16
+MM,AT,1,  10,1,1,,'Tabellenidentifikator'            ,,'',T
+MM,AT,1,  70,1,1,,'TRUMPF-Kennung'                   ,,'',Z
+MM,AT,1, 500,1,1,,'Beladegeraet'                     ,,'',Z
+MM,AT,1, 520,1,1,,'LIFT_SAUGERGRUPPE_1'              ,,'',Z
+MM,AT,1, 530,1,1,,'LIFT_SAUGERGRUPPE_2'              ,,'',Z
+MM,AT,1, 540,1,1,,'LIFT_SAUGERGRUPPE_3'              ,,'',Z
+MM,AT,1, 550,1,1,,'LIFT_SAUGERGRUPPE_4'              ,,'',Z
+MM,AT,1, 580,1,1,,'Lift Doppelblechdet aktiv'        ,,'Bool',Z
+MM,AT,1, 590,1,1,,'Lift abschaelen'                  ,,'Bool',Z
+MM,AT,1, 620,1,1,,'Blechanschlag'                    ,,'',Z
+MM,AT,1, 630,1,1,,'Blechlage vermessen'              ,,'',Z
+MM,AT,1, 640,1,1,,'Messbereich X'                    ,,'mm',Z
+MM,AT,1, 650,1,1,,'Messbereich Y'                    ,,'mm',Z
+MM,AT,1, 660,1,1,,'Kalibrierung'                     ,,'Bool',Z
+MM,AT,1, 690,1,1,,'Palettenwechselart'               ,,'',Z
+MM,AT,1, 700,1,1,,'Messecke'                         ,,'',Z
+C
+ZA,DA,1
+DA,'SHL-1',1,1,0,0,0,0,1,0,1,0,50,50,1,1,1
+C
+ENDE_SHEET_LOAD
+C
+BEGIN_LTT_STAMM
+C
+ZA,MM,138
+MM,AT,1,  10,1,1,,'Tabellenidentifikator'            ,,'',T
+MM,AT,1,  20,1,1,,'Bearbeiter'                       ,,'',T
+MM,AT,1,  30,1,1,,'Erstellungsdatum'                 ,,'',T
+MM,AT,1,  40,1,1,,'letzte Aenderung'                 ,,'',T
+MM,AT,1,  50,1,1,,'Bemerkung'                        ,,'',T
+MM,AT,1,  60,1,1,,'Einblendstatus'                   ,,'',Z
+MM,AT,1,  70,1,1,,'Erstellungs-Einheit'              ,,'',Z
+MM,AT,1,  80,1,1,,'Maschinentyp'                     ,,'',T
+MM,AT,1,  90,1,1,,'Lasernennleistung'                ,,'W',Z
+MM,AT,1, 100,1,1,,'Material'                         ,,'',T
+MM,AT,1, 110,1,1,,'Materialdicke'                    ,,'mm',Z
+MM,AT,1, 120,1,1,,'Linsenbrennweite'                 ,,'in',Z
+MM,AT,1, 130,1,1,,'Duesentyp Duesendurchmesser'      ,,'',T
+MM,AT,1, 140,1,1,,'Schneidkopfnummer'                ,,'',Z
+MM,AT,1, 150,1,1,,'Gasspuelen Schneiden-Einst'       ,,'s',Z
+MM,AT,1, 160,1,1,,'Gasspuelen Einst-Schneiden'       ,,'s',Z
+MM,AT,1, 170,1,1,,'SCHN Einstellmass'                ,,'mm',Z
+MM,AT,1, 180,1,1,,'SCHN red. Beschleunigung'         ,,'m/s2',Z
+MM,AT,1, 190,1,1,,'SCHN Beschleunigung'              ,,'m/s2',Z
+MM,AT,1, 200,1,1,,'SCHN Eckenkuehlzeit'              ,,'s',Z
+MM,AT,1, 210,1,1,,'SCHN V-Red AnschnittDickblech'    ,,'%',Z
+MM,AT,1, 220,1,1,,'SCHN Gasart Schneiden'            ,,'',Z
+MM,AT,1, 230,1,1,,'SCHN Gasart red. Schneiden'       ,,'',Z
+MM,AT,1, 240,1,1,,'SCHN-GR Schnittspalt'             ,,'mm',Z
+MM,AT,1, 250,1,1,,'SCHN-GR-N Laserleistung'          ,,'W',Z
+MM,AT,1, 260,1,1,,'SCHN-GR-N Tastfrequenz'           ,,'Hz',Z
+MM,AT,1, 270,1,1,,'SCHN-GR-N Geschwindigkeit'        ,,'m/min',Z
+MM,AT,1, 280,1,1,,'SCHN-GR-N Duesenabstand'          ,,'mm',Z
+MM,AT,1, 290,1,1,,'SCHN-GR-N Gasdruck'               ,,'bar',Z
+MM,AT,1, 300,1,1,,'SCHN-GR-R Laserleistung'          ,,'W',Z
+MM,AT,1, 310,1,1,,'SCHN-GR-R Tastfrequenz'           ,,'Hz',Z
+MM,AT,1, 320,1,1,,'SCHN-GR-R Geschwindigkeit'        ,,'m/min',Z
+MM,AT,1, 330,1,1,,'SCHN-GR-R Duesenabstand'          ,,'mm',Z
+MM,AT,1, 340,1,1,,'SCHN-GR-R Gasdruck'               ,,'bar',Z
+MM,AT,1, 350,1,1,,'SCHN-MI Schnittspalt'             ,,'mm',Z
+MM,AT,1, 360,1,1,,'SCHN-MI-N Laserleistung'          ,,'W',Z
+MM,AT,1, 370,1,1,,'SCHN-MI-N Tastfrequenz'           ,,'Hz',Z
+MM,AT,1, 380,1,1,,'SCHN-MI-N Geschwindigkeit'        ,,'m/min',Z
+MM,AT,1, 390,1,1,,'SCHN-MI-N Duesenabstand'          ,,'mm',Z
+MM,AT,1, 400,1,1,,'SCHN-MI-N Gasdruck'               ,,'bar',Z
+MM,AT,1, 410,1,1,,'SCHN-MI-R Laserleistung'          ,,'W',Z
+MM,AT,1, 420,1,1,,'SCHN-MI-R Tastfrequenz'           ,,'Hz',Z
+MM,AT,1, 430,1,1,,'SCHN-MI-R Geschwindigkeit'        ,,'m/min',Z
+MM,AT,1, 440,1,1,,'SCHN-MI-R Duesenabstand'          ,,'mm',Z
+MM,AT,1, 450,1,1,,'SCHN-MI-R Gasdruck'               ,,'bar',Z
+MM,AT,1, 460,1,1,,'SCHN-KL Schnittspalt'             ,,'mm',Z
+MM,AT,1, 470,1,1,,'SCHN-KL-N Laserleistung'          ,,'W',Z
+MM,AT,1, 480,1,1,,'SCHN-KL-N Tastfrequenz'           ,,'Hz',Z
+MM,AT,1, 490,1,1,,'SCHN-KL-N Geschwindigkeit'        ,,'m/min',Z
+MM,AT,1, 500,1,1,,'SCHN-KL-N Duesenabstand'          ,,'mm',Z
+MM,AT,1, 510,1,1,,'SCHN-KL-N Gasdruck'               ,,'bar',Z
+MM,AT,1, 520,1,1,,'SCHN-KL-R Laserleistung'          ,,'W',Z
+MM,AT,1, 530,1,1,,'SCHN-KL-R Tastfrequenz'           ,,'Hz',Z
+MM,AT,1, 540,1,1,,'SCHN-KL-R Geschwindigkeit'        ,,'m/min',Z
+MM,AT,1, 550,1,1,,'SCHN-KL-R Duesenabstand'          ,,'mm',Z
+MM,AT,1, 560,1,1,,'SCHN-KL-R Gasdruck'               ,,'bar',Z
+MM,AT,1, 570,1,1,,'EINS Einstellmass'                ,,'mm',Z
+MM,AT,1, 580,1,1,,'EINS-N Zeit'                      ,,'s',Z
+MM,AT,1, 590,1,1,,'EINS-N Rampenzyklusnummer'        ,,'',Z
+MM,AT,1, 600,1,1,,'EINS-N Duesenabstand'             ,,'mm',Z
+MM,AT,1, 610,1,1,,'EINS-N Ausblaszeit'               ,,'s',Z
+MM,AT,1, 620,1,1,,'EINS-N Gasart'                    ,,'',Z
+MM,AT,1, 630,1,1,,'EINS-N Gasdruck'                  ,,'bar',Z
+MM,AT,1, 640,1,1,,'EINS-N Oelspruehen'               ,,'',Z
+MM,AT,1, 650,1,1,,'EINS-R Zeit'                      ,,'s',Z
+MM,AT,1, 660,1,1,,'EINS-R Rampenzyklusnummer'        ,,'',Z
+MM,AT,1, 670,1,1,,'EINS-R Duesenabstand'             ,,'mm',Z
+MM,AT,1, 680,1,1,,'EINS-R Ausblaszeit'               ,,'s',Z
+MM,AT,1, 690,1,1,,'EINS-R Gasart'                    ,,'',Z
+MM,AT,1, 700,1,1,,'EINS-R Gasdruck'                  ,,'bar',Z
+MM,AT,1, 710,1,1,,'EINS-R Oelspruehen'               ,,'',Z
+MM,AT,1, 720,1,1,,'ABDA Einstellmass'                ,,'mm',Z
+MM,AT,1, 730,1,1,,'ABDA Zeit'                        ,,'s',Z
+MM,AT,1, 740,1,1,,'ABDA Duesenabstand'               ,,'mm',Z
+MM,AT,1, 750,1,1,,'ABDA Laserleistung'               ,,'W',Z
+MM,AT,1, 760,1,1,,'ABDA Tastfrequenz'                ,,'Hz',Z
+MM,AT,1, 770,1,1,,'ABDA Geschwindigkeit'             ,,'m/min',Z
+MM,AT,1, 780,1,1,,'ABDA Gasart'                      ,,'',Z
+MM,AT,1, 790,1,1,,'ABDA Gasdruck'                    ,,'bar',Z
+MM,AT,1, 800,1,1,,'KENN Einstellmass'                ,,'mm',Z
+MM,AT,1, 810,1,1,,'KENN Duesenabstand'               ,,'mm',Z
+MM,AT,1, 820,1,1,,'KENN Laserleistung'               ,,'W',Z
+MM,AT,1, 830,1,1,,'KENN Tastfrequenz'                ,,'Hz',Z
+MM,AT,1, 840,1,1,,'KENN Geschwindigkeit'             ,,'m/min',Z
+MM,AT,1, 850,1,1,,'KENN Gasart'                      ,,'',Z
+MM,AT,1, 860,1,1,,'KENN Gasdruck'                    ,,'bar',Z
+MM,AT,1, 870,1,1,,'KOER-G Einstellmass'              ,,'mm',Z
+MM,AT,1, 880,1,1,,'KOER-G Duesenabstand'             ,,'mm',Z
+MM,AT,1, 890,1,1,,'KOER-G Laserleistung'             ,,'W',Z
+MM,AT,1, 900,1,1,,'KOER-G Tastfrequenz'              ,,'Hz',Z
+MM,AT,1, 910,1,1,,'KOER-G Geschwindigkeit'           ,,'m/min',Z
+MM,AT,1, 920,1,1,,'KOER-G Gasart'                    ,,'',Z
+MM,AT,1, 930,1,1,,'KOER-G Gasdruck'                  ,,'bar',Z
+MM,AT,1, 940,1,1,,'KOER-P Einstechzeit'              ,,'s',Z
+MM,AT,1, 950,1,1,,'KOER-P Rampenzyklusnummer'        ,,'',Z
+MM,AT,1, 960,1,1,,'KOER-P Duesenabstand'             ,,'mm',Z
+MM,AT,1, 970,1,1,,'KOER-P Gasart'                    ,,'',Z
+MM,AT,1, 980,1,1,,'KOER-P Gasdruck'                  ,,'bar',Z
+MM,AT,1, 990,1,1,,'PUNK Einstellmass'                ,,'mm',Z
+MM,AT,1,1000,1,1,,'PUNK-S Zeit'                      ,,'s',Z
+MM,AT,1,1010,1,1,,'PUNK-S Rampenzyklusnummer'        ,,'',Z
+MM,AT,1,1020,1,1,,'PUNK-S Duesenabstand'             ,,'mm',Z
+MM,AT,1,1030,1,1,,'PUNK-S Gasart'                    ,,'',Z
+MM,AT,1,1040,1,1,,'PUNK-S Gasdruck'                  ,,'bar',Z
+MM,AT,1,1050,1,1,,'PUNK-F Zeit'                      ,,'s',Z
+MM,AT,1,1060,1,1,,'PUNK-F Rampenzyklusnummer'        ,,'',Z
+MM,AT,1,1070,1,1,,'PUNK-F Duesenabstand'             ,,'mm',Z
+MM,AT,1,1080,1,1,,'PUNK-F Gasart'                    ,,'',Z
+MM,AT,1,1090,1,1,,'PUNK-F Gasdruck'                  ,,'bar',Z
+MM,AT,1,1100,1,1,,'TRUMPF-Kennung'                   ,,'',Z
+MM,AT,1,1110,1,1,,'Vorschub Anf. aus Stanzloch'      ,,'%',Z
+MM,AT,1,1120,1,1,,'SCHN-GR Einstellmass'             ,,'mm',Z
+MM,AT,1,1130,1,1,,'SCHN-MI Einstellmass'             ,,'mm',Z
+MM,AT,1,1140,1,1,,'SCHN-KL Einstellmass'             ,,'mm',Z
+MM,AT,1,1150,1,1,,'EINS-N Zeit SprintLas'            ,,'s',Z
+MM,AT,1,1160,1,1,,'SCHN hohe Beschleunigung'         ,,'m/s2',Z
+MM,AT,1,1730,1,1,,'PMS Aktiv'                        ,,'',Z
+MM,AT,1,1740,1,1,,'PMS-Schwellenwert 1'              ,,'',Z
+MM,AT,1,1750,1,1,,'PMS-Schwellenwert 2'              ,,'',Z
+MM,AT,1,1760,1,1,,'LLS - LFS Modus'                  ,,'',Z
+MM,AT,1,1770,1,1,,'LLS obere Grenze in %'            ,,'%',Z
+MM,AT,1,1780,1,1,,'Leistung bei oberer Grenze in %'  ,,'%',Z
+MM,AT,1,1790,1,1,,'LLS untere Grenze in %'           ,,'%',Z
+MM,AT,1,1800,1,1,,'Leistung bei unterer Grenze in %' ,,'%',Z
+MM,AT,1,1810,1,1,,'LFS obere Grenze in %'            ,,'%',Z
+MM,AT,1,1820,1,1,,'Frequenz bei oberer Grenze in %'  ,,'%',Z
+MM,AT,1,1830,1,1,,'LFS untere Grenze in %'           ,,'%',Z
+MM,AT,1,1840,1,1,,'Frequenz bei unterer Grenze in %' ,,'%',Z
+MM,AT,1,1850,1,1,,'Sensorik Einstechen normal'       ,,'',Z
+MM,AT,1,1860,1,1,,'Sensorik Einstechen sanft'        ,,'',Z
+MM,AT,1,1870,1,1,,'SCHN-GR Strahldurchmesser'        ,,'mm',Z
+MM,AT,1,1880,1,1,,'SCHN-MI Strahldurchmesser'        ,,'mm',Z
+MM,AT,1,1890,1,1,,'SCHN-KL Strahldurchmesser'        ,,'mm',Z
+MM,AT,1,1900,1,1,,'EINS Strahldurchmesser'           ,,'mm',Z
+MM,AT,1,1910,1,1,,'ABDA Strahldurchmesser'           ,,'mm',Z
+MM,AT,1,1920,1,1,,'KENN Strahldurchmesser'           ,,'mm',Z
+MM,AT,1,1930,1,1,,'KOER Strahldurchmesser'           ,,'mm',Z
+MM,AT,1,1940,1,1,,'PUNK Strahldurchmesser'           ,,'mm',Z
+C
+ZA,DA,1
+DA,'T2D-5391','244hs','01.09.01','','St37 4.0mm 5000W 5.0Z O2 TC16',1,0,
+*  'TC16',5000,'St37-40',4.000,7.500,'0.8',4,0.00,0.00,-0.50,10.00,10.00,
+*  0.50,0.00,1,1,0.35,4000.00,10000.00,4.30,0.70,0.80,-1.00,-1.00,-1.00,
+*  -1.00,-1.00,-1.00,-1.00,-1.00,-1.00,-1.00,-1.00,-1.00,-1.00,-1.00,
+*  -1.00,-1.00,0.15,300.00,300.00,0.30,0.70,4.00,-1.00,-1.00,-1.00,-1.00,
+*  -1.00,-2.50,0.20,19,3.00,0.00,1,2.00,0,1.60,12,2.50,0.00,1,2.00,0,1.00,
+*  -1.00,-1.00,-1,-1,-1.00,-1,-1.00,-4.00,8.00,50,100,3.00,1,2.00,1.00,
+*  2.00,90,1000,0.40,1,2.00,1.00,5,1.50,1,1.30,1.00,0.30,14,6.00,1,0.00,
+*  0.50,16,8.00,1,0.00,1,0,-0.50,1.00,-0.50,0.20,17.00,0,-1,-1,0,100.00,
+*  100.00,0.00,100.00,100.00,100.00,0.00,100.00,1,1,14.00,14.00,14.00,
+*  14.00,14.00,14.00,14.00,14.00
+C
+ENDE_LTT_STAMM
+C
+BEGIN_LTT_CALLS
+C
+ZA,MM,1
+MM,AT,1,  10,1,1,,'Tabellenidentifikator'            ,,'',T
+C
+ZA,DA,1
+DA,'T2D-5391'
+C
+ENDE_LTT_CALLS
+C
+BEGIN_PARTS_IN_PROGRAM
+C
+ZA,MM,15
+MM,AT,1,  10,1,1,,'Hauptprogrammname'                ,,'',T
+MM,AT,1,  20,1,1,,'reserviert'                       ,,'',T
+MM,AT,1,  30,1,1,,'Teil-Identnummer'                 ,,'',T
+MM,AT,1,  40,1,1,,'reserviert'                       ,,'',Z
+MM,AT,1,  50,1,1,,'Geometriefilename'                ,,'',T
+MM,AT,1,  60,1,1,,'Anzahl'                           ,,'',Z
+MM,AT,1,  70,1,1,,'Geometriefilename (einf.Darstl)'  ,,'',T
+MM,AT,1,  80,1,1,,'Bearbeitungszeit'                 ,,'min',Z
+MM,AT,1,  90,1,1,,'Flaeche'                          ,,'mm2',Z
+MM,AT,1, 100,1,1,,'ToPs-Zeichnungskunde'             ,,'',T
+MM,AT,1, 110,1,1,,'ToPs-Teile-Nummerierung'          ,,'',T
+MM,AT,1, 120,1,1,,'ToPs-Zeichnungsname'              ,,'',T
+MM,AT,1, 130,1,1,,'Abmessung X'                      ,,'mm',Z
+MM,AT,1, 140,1,1,,'Abmessung Y'                      ,,'mm',Z
+MM,AT,1, 500,1,1,,'TRUMPF-Kennung'                   ,,'',Z
+C
+ZA,DA,1
+DA,'CERMEN_4_25_1',0,'',0,
+*  'E:\CAD\C\CERMEN_MAKINA\2005\24_12\KOZMATIK KOLTUK LAZER KESIM\4_MM\K',
+-  'KT1_6ADET.GEO',6,'KKT1_6ADET',0.21,25996.48,'',1,'',260.00,140.00,1
+C
+ENDE_PARTS_IN_PROGRAM
+C
+BEGIN_PARTS_IN_PROGRAM_POS
+C
+ZA,MM,11
+MM,AT,1,  10,1,1,,'laufende Nummer gefertigtes Teil' ,,'',Z
+MM,AT,1,  20,1,1,,'Hauptprogrammname'                ,,'',T
+MM,AT,1,  30,1,1,,'Teil-Identnummer'                 ,,'',T
+MM,AT,1,  60,1,1,,'Position X-Koordinate'            ,,'mm',Z
+MM,AT,1,  70,1,1,,'Position Y-Koordinate'            ,,'mm',Z
+MM,AT,1,  80,1,1,,'Abmessung in X'                   ,,'mm',Z
+MM,AT,1,  90,1,1,,'Abmessung in Y'                   ,,'mm',Z
+MM,AT,1, 100,1,1,,'Winkellage'                       ,,'deg',Z
+MM,AT,1, 150,1,1,,'X-Koordinate Schwerpunkt'         ,,'mm',Z
+MM,AT,1, 160,1,1,,'Y-Koordinate Schwerpunkt'         ,,'mm',Z
+MM,AT,1, 500,1,1,,'TRUMPF-Kennung'                   ,,'',Z
+C
+ZA,DA,6
+DA,1,'CERMEN_4_25_1','',13.63,6.00,260.00,140.00,180.00,115.74,65.77,1
+DA,2,'CERMEN_4_25_1','',8.00,111.95,260.00,140.00,0.00,165.89,192.18,1
+DA,3,'CERMEN_4_25_1','',13.63,257.95,260.00,140.00,180.00,115.74,317.71,1
+DA,4,'CERMEN_4_25_1','',8.00,363.90,260.00,140.00,0.00,165.89,444.13,1
+DA,5,'CERMEN_4_25_1','',13.63,509.90,260.00,140.00,180.00,115.74,569.66,1
+DA,6,'CERMEN_4_25_1','',8.00,615.84,260.00,140.00,0.00,165.89,696.08,1
+C
+ENDE_PARTS_IN_PROGRAM_POS
+C
+BEGIN_MICROJOINT
+C
+ZA,MM,12
+MM,AT,1,  10,1,1,,'Tabellenidentifikator'            ,,'',T
+MM,AT,1, 100,1,1,,'programmierte Microjoints aktiv'  ,,'Bool',Z
+MM,AT,1, 110,1,1,,'automatische Microjoints aktiv'   ,,'Bool',Z
+MM,AT,1, 120,1,1,,'Microjointbreite kleine Kontur'   ,,'mm',Z
+MM,AT,1, 130,1,1,,'Microjointbreite mittlere Kontur' ,,'mm',Z
+MM,AT,1, 140,1,1,,'Microjointbreite grosse Kontur'   ,,'mm',Z
+MM,AT,1, 150,1,1,,'Konturausdehnung min X autom. Microjoint',,'mm',Z
+MM,AT,1, 160,1,1,,'Konturausdehnung max X autom. Microjoint',,'mm',Z
+MM,AT,1, 170,1,1,,'Konturausdehnung min Y autom. Microjoint',,'mm',Z
+MM,AT,1, 180,1,1,,'Konturausdehnung max Y autom. Microjoint',,'mm',Z
+MM,AT,1, 190,1,1,,'Einstechart nach Microjoint'      ,,'',Z
+MM,AT,1, 500,1,1,,'TRUMPF-Kennung'                   ,,'',Z
+C
+ZA,DA,1
+DA,'MIJO-1',0,0,0.00,0.00,0.00,-1.00,-1.00,-1.00,-1.00,11,1
+C
+ENDE_MICROJOINT
+C
+BEGIN_PROGRAMM
+C
+ZA,MM,4
+MM,AT,1,  10,1,1,,'Programmnummer'                   ,,'',T
+MM,AT,1,  20,1,1,,'Programmtyp'                      ,,'',T
+MM,AT,1,  30,1,1,,'Bemerkung'                        ,,'',T
+MM,AT,1,  40,1,1,,'Bearbeitungszeit'                 ,,'min',Z
+C
+ZA,DA,2
+DA,'SP1CERMEN_4_25_1','UP','',
+START_TEXT
+N10 MSG("SUB-PROGRAM NO.,SP1CERMEN_4_25_1")
+N20G91
+N30;(PART NUMBER: 1 )
+N40TC_POS_LEVEL(40.0)
+N50TC_LASER_ON(9,"T2D-5391",10,100);SPRINTLAS
+N60X3.049Y-3.402
+N70G03X0.363Y-0.010I0.186J0.167
+N80G03I-3.412J3.412
+N90TC_LASER_OFF(3);SPRINTLAS_ENDE
+N100G01X10.263Y127.987
+N110TC_LASER_ON(9,"T2D-5391",10,100);SPRINTLAS
+N120Y-4.400
+N130Y-139.850
+N140G02X-0.500Y-0.500I-0.500
+N150G01X-49.706
+N160X-209.815Y76.366
+N170G02X-0.329Y0.470I0.171J0.470
+N180G01Y5.814
+N190G02X0.500Y0.500I0.500
+N200G01X39.200
+N210G03X0.500Y0.500J0.500
+N220G01Y56.200
+N230G02X0.500Y0.500I0.500
+N240G01X219.650
+N250TC_LASER_OFF(3);SPRINTLAS_ENDE
+N260G01
+N270G90
+N280M17
+N290M02
+STOP_TEXT
+DA,'CERMEN_4_25_1','HP','',
+START_TEXT
+N10 MSG("MAIN PROGRAM NO.:,CERMEN_4_25_1")
+N20 MSG("TOPS 100 V5.02 B222.0 - L3050 - SIEMENS")
+N30 MSG("SHEET DIMENSIONS 4.00 X 285.00 X 770.00 ")
+N40G71
+N50F282000
+N60TC_MICROJOINT("MIJO-1")
+N70;(FILE NAME: E:\CAD\N\NURI_CELEP\2005\17_11\10MM\CERMEN_4_25_1.LST)
+N80;(TRANSFERNAME: CERMEN_4_25_1.LST PROGRAMME RUNS: 1)
+N90;(MACHINE: L3050 TYPE: 1)
+N100;(CONTROL: SIN 840D VERSION:)
+N110TC_POS_LEVEL(40.0)
+N120TC_SHEET_TECH("SHT-1");BLECHLAGE
+N130TC_SHEET_LOAD("SHL-1")
+N140;GOTOF ENTRY_LASER
+N150;ENTRY_LASER:
+N160;(PART NUMBER: 1 CONSECUTIVE NUMBER: 1 )
+N170X27.135Y126.000
+N180ROT RPL=180.00
+N190SP1CERMEN_4_25_1
+N200ROT
+N210;ENTRY_LASER:
+N220;(PART NUMBER: 1 CONSECUTIVE NUMBER: 2 )
+N230X254.500Y131.948
+N240SP1CERMEN_4_25_1
+N250;ENTRY_LASER:
+N260;(PART NUMBER: 1 CONSECUTIVE NUMBER: 3 )
+N270X27.135Y377.948
+N280ROT RPL=180.00
+N290SP1CERMEN_4_25_1
+N300ROT
+N310;ENTRY_LASER:
+N320;(PART NUMBER: 1 CONSECUTIVE NUMBER: 4 )
+N330X254.500Y383.896
+N340SP1CERMEN_4_25_1
+N350;ENTRY_LASER:
+N360;(PART NUMBER: 1 CONSECUTIVE NUMBER: 5 )
+N370X27.135Y629.896
+N380ROT RPL=180.00
+N390SP1CERMEN_4_25_1
+N400ROT
+N410;ENTRY_LASER:
+N420;(PART NUMBER: 1 CONSECUTIVE NUMBER: 6 )
+N430X254.500Y635.844
+N440SP1CERMEN_4_25_1
+N450TC_LASER_OFF(2)
+N460M30
+STOP_TEXT
+ENDE_PROGRAMM
+ED
+

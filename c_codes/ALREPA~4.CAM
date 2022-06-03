@@ -1,0 +1,539 @@
+BD
+SET_METRIC
+C
+BEGIN_EINRICHTEPLAN_INFO
+C
+ZA,MM,20
+MM,AT,1,  10,1,1,,'Maschine'                         ,,'',T
+MM,AT,1,  20,1,1,,'Typ'                              ,,'',Z
+MM,AT,1,  30,1,1,,'Steuerung'                        ,,'',T
+MM,AT,1,  40,1,1,,'Variante'                         ,,'',Z
+MM,AT,1,  50,1,1,,'Firma'                            ,,'',T
+MM,AT,1,  60,1,1,,'Programmnummer'                   ,,'',T
+MM,AT,1,  70,1,1,,'Bearbeiter'                       ,,'',T
+MM,AT,1,  80,1,1,,'Datum'                            ,,'',T
+MM,AT,1,  90,1,1,,'Auftragsname'                     ,,'',T
+MM,AT,1, 100,1,1,,'Anzahl der Programmdurchlaeufe'   ,,'',Z
+MM,AT,1, 110,1,1,,'Tafelname'                        ,,'',T
+MM,AT,1, 120,1,1,,'Speicherbedarf'                   ,,'',Z
+MM,AT,1, 130,1,1,,'Material-ID'                      ,,'',T
+MM,AT,1, 140,1,1,,'Tafelgewicht'                     ,,'kg',Z
+MM,AT,1, 150,1,1,,'Maschinenzeit'                    ,,'min',Z
+MM,AT,1, 160,1,1,,'Bemerkung'                        ,,'',T
+MM,AT,1, 170,1,1,,'Flag Automatisiert'               ,,'Bool',Z
+MM,AT,1, 180,1,1,,'Flag ToPsxxx-Programm'            ,,'Bool',Z
+MM,AT,1, 190,1,1,,'Einrichteplanfilename'            ,,'',T
+MM,AT,1, 200,1,1,,'Lagergutbezeichnung'              ,,'',T
+C
+ZA,DA,1
+DA,'L3050',1,'Sin 840D',1,'Trumpf','ALREPA_15T12_3MM_1','User',15.12.2005,
+*  'ALREPA_15T12_3MM',1,
+*  'L:\CAD\A\ALREPA\2005\15_12\3MMSS\ALREPA_15T12_3MM_1.LST',4885,
+*  'St37-30',25,4.58,'  ',0,1,
+*  'L:\CAD\A\ALREPA\2005\15_12\3MMSS\ALREPA_15T12_3MM_1.HTML',''
+C
+ENDE_EINRICHTEPLAN_INFO
+C
+BEGIN_SHEET_TECH
+C
+ZA,MM,9
+MM,AT,1,  10,1,1,,'Tabellenidentifikator'            ,,'',T
+MM,AT,1,  20,1,1,,'Blechmass X'                      ,,'mm',Z
+MM,AT,1,  30,1,1,,'Blechmass Y'                      ,,'mm',Z
+MM,AT,1,  40,1,1,,'Blechmass Z'                      ,,'mm',Z
+MM,AT,1, 200,1,1,,'TRUMPF-Kennung'                   ,,'',Z
+MM,AT,1, 220,1,1,,'Blechmass X real'                 ,,'mm',Z
+MM,AT,1, 230,1,1,,'Blechmass Y real'                 ,,'mm',Z
+MM,AT,1, 240,1,1,,'Materialkennung'                  ,,'',T
+MM,AT,1, 260,1,1,,'Werkstoffdichte'                  ,,'kg/dm3',Z
+C
+ZA,DA,1
+DA,'SHT-1',1060.00,1000.00,3.00,1,1060.00,1000.00,St37-20,7.900   
+C
+ENDE_SHEET_TECH
+C
+BEGIN_SHEET_LOAD
+C
+ZA,MM,16
+MM,AT,1,  10,1,1,,'Tabellenidentifikator'            ,,'',T
+MM,AT,1,  70,1,1,,'TRUMPF-Kennung'                   ,,'',Z
+MM,AT,1, 500,1,1,,'Beladegeraet'                     ,,'',Z
+MM,AT,1, 520,1,1,,'LIFT_SAUGERGRUPPE_1'              ,,'',Z
+MM,AT,1, 530,1,1,,'LIFT_SAUGERGRUPPE_2'              ,,'',Z
+MM,AT,1, 540,1,1,,'LIFT_SAUGERGRUPPE_3'              ,,'',Z
+MM,AT,1, 550,1,1,,'LIFT_SAUGERGRUPPE_4'              ,,'',Z
+MM,AT,1, 580,1,1,,'Lift Doppelblechdet aktiv'        ,,'Bool',Z
+MM,AT,1, 590,1,1,,'Lift abschaelen'                  ,,'Bool',Z
+MM,AT,1, 620,1,1,,'Blechanschlag'                    ,,'',Z
+MM,AT,1, 630,1,1,,'Blechlage vermessen'              ,,'',Z
+MM,AT,1, 640,1,1,,'Messbereich X'                    ,,'mm',Z
+MM,AT,1, 650,1,1,,'Messbereich Y'                    ,,'mm',Z
+MM,AT,1, 660,1,1,,'Kalibrierung'                     ,,'Bool',Z
+MM,AT,1, 690,1,1,,'Palettenwechselart'               ,,'',Z
+MM,AT,1, 700,1,1,,'Messecke'                         ,,'',Z
+C
+ZA,DA,1
+DA,'SHL-1',1,1,0,0,0,0,1,0,1,0,50,50,1,1,1
+C
+ENDE_SHEET_LOAD
+C
+BEGIN_LTT_STAMM
+C
+ZA,MM,138
+MM,AT,1,  10,1,1,,'Tabellenidentifikator'            ,,'',T
+MM,AT,1,  20,1,1,,'Bearbeiter'                       ,,'',T
+MM,AT,1,  30,1,1,,'Erstellungsdatum'                 ,,'',T
+MM,AT,1,  40,1,1,,'letzte Aenderung'                 ,,'',T
+MM,AT,1,  50,1,1,,'Bemerkung'                        ,,'',T
+MM,AT,1,  60,1,1,,'Einblendstatus'                   ,,'',Z
+MM,AT,1,  70,1,1,,'Erstellungs-Einheit'              ,,'',Z
+MM,AT,1,  80,1,1,,'Maschinentyp'                     ,,'',T
+MM,AT,1,  90,1,1,,'Lasernennleistung'                ,,'W',Z
+MM,AT,1, 100,1,1,,'Material'                         ,,'',T
+MM,AT,1, 110,1,1,,'Materialdicke'                    ,,'mm',Z
+MM,AT,1, 120,1,1,,'Linsenbrennweite'                 ,,'in',Z
+MM,AT,1, 130,1,1,,'Duesentyp Duesendurchmesser'      ,,'',T
+MM,AT,1, 140,1,1,,'Schneidkopfnummer'                ,,'',Z
+MM,AT,1, 150,1,1,,'Gasspuelen Schneiden-Einst'       ,,'s',Z
+MM,AT,1, 160,1,1,,'Gasspuelen Einst-Schneiden'       ,,'s',Z
+MM,AT,1, 170,1,1,,'SCHN Einstellmass'                ,,'mm',Z
+MM,AT,1, 180,1,1,,'SCHN red. Beschleunigung'         ,,'m/s2',Z
+MM,AT,1, 190,1,1,,'SCHN Beschleunigung'              ,,'m/s2',Z
+MM,AT,1, 200,1,1,,'SCHN Eckenkuehlzeit'              ,,'s',Z
+MM,AT,1, 210,1,1,,'SCHN V-Red AnschnittDickblech'    ,,'%',Z
+MM,AT,1, 220,1,1,,'SCHN Gasart Schneiden'            ,,'',Z
+MM,AT,1, 230,1,1,,'SCHN Gasart red. Schneiden'       ,,'',Z
+MM,AT,1, 240,1,1,,'SCHN-GR Schnittspalt'             ,,'mm',Z
+MM,AT,1, 250,1,1,,'SCHN-GR-N Laserleistung'          ,,'W',Z
+MM,AT,1, 260,1,1,,'SCHN-GR-N Tastfrequenz'           ,,'Hz',Z
+MM,AT,1, 270,1,1,,'SCHN-GR-N Geschwindigkeit'        ,,'m/min',Z
+MM,AT,1, 280,1,1,,'SCHN-GR-N Duesenabstand'          ,,'mm',Z
+MM,AT,1, 290,1,1,,'SCHN-GR-N Gasdruck'               ,,'bar',Z
+MM,AT,1, 300,1,1,,'SCHN-GR-R Laserleistung'          ,,'W',Z
+MM,AT,1, 310,1,1,,'SCHN-GR-R Tastfrequenz'           ,,'Hz',Z
+MM,AT,1, 320,1,1,,'SCHN-GR-R Geschwindigkeit'        ,,'m/min',Z
+MM,AT,1, 330,1,1,,'SCHN-GR-R Duesenabstand'          ,,'mm',Z
+MM,AT,1, 340,1,1,,'SCHN-GR-R Gasdruck'               ,,'bar',Z
+MM,AT,1, 350,1,1,,'SCHN-MI Schnittspalt'             ,,'mm',Z
+MM,AT,1, 360,1,1,,'SCHN-MI-N Laserleistung'          ,,'W',Z
+MM,AT,1, 370,1,1,,'SCHN-MI-N Tastfrequenz'           ,,'Hz',Z
+MM,AT,1, 380,1,1,,'SCHN-MI-N Geschwindigkeit'        ,,'m/min',Z
+MM,AT,1, 390,1,1,,'SCHN-MI-N Duesenabstand'          ,,'mm',Z
+MM,AT,1, 400,1,1,,'SCHN-MI-N Gasdruck'               ,,'bar',Z
+MM,AT,1, 410,1,1,,'SCHN-MI-R Laserleistung'          ,,'W',Z
+MM,AT,1, 420,1,1,,'SCHN-MI-R Tastfrequenz'           ,,'Hz',Z
+MM,AT,1, 430,1,1,,'SCHN-MI-R Geschwindigkeit'        ,,'m/min',Z
+MM,AT,1, 440,1,1,,'SCHN-MI-R Duesenabstand'          ,,'mm',Z
+MM,AT,1, 450,1,1,,'SCHN-MI-R Gasdruck'               ,,'bar',Z
+MM,AT,1, 460,1,1,,'SCHN-KL Schnittspalt'             ,,'mm',Z
+MM,AT,1, 470,1,1,,'SCHN-KL-N Laserleistung'          ,,'W',Z
+MM,AT,1, 480,1,1,,'SCHN-KL-N Tastfrequenz'           ,,'Hz',Z
+MM,AT,1, 490,1,1,,'SCHN-KL-N Geschwindigkeit'        ,,'m/min',Z
+MM,AT,1, 500,1,1,,'SCHN-KL-N Duesenabstand'          ,,'mm',Z
+MM,AT,1, 510,1,1,,'SCHN-KL-N Gasdruck'               ,,'bar',Z
+MM,AT,1, 520,1,1,,'SCHN-KL-R Laserleistung'          ,,'W',Z
+MM,AT,1, 530,1,1,,'SCHN-KL-R Tastfrequenz'           ,,'Hz',Z
+MM,AT,1, 540,1,1,,'SCHN-KL-R Geschwindigkeit'        ,,'m/min',Z
+MM,AT,1, 550,1,1,,'SCHN-KL-R Duesenabstand'          ,,'mm',Z
+MM,AT,1, 560,1,1,,'SCHN-KL-R Gasdruck'               ,,'bar',Z
+MM,AT,1, 570,1,1,,'EINS Einstellmass'                ,,'mm',Z
+MM,AT,1, 580,1,1,,'EINS-N Zeit'                      ,,'s',Z
+MM,AT,1, 590,1,1,,'EINS-N Rampenzyklusnummer'        ,,'',Z
+MM,AT,1, 600,1,1,,'EINS-N Duesenabstand'             ,,'mm',Z
+MM,AT,1, 610,1,1,,'EINS-N Ausblaszeit'               ,,'s',Z
+MM,AT,1, 620,1,1,,'EINS-N Gasart'                    ,,'',Z
+MM,AT,1, 630,1,1,,'EINS-N Gasdruck'                  ,,'bar',Z
+MM,AT,1, 640,1,1,,'EINS-N Oelspruehen'               ,,'',Z
+MM,AT,1, 650,1,1,,'EINS-R Zeit'                      ,,'s',Z
+MM,AT,1, 660,1,1,,'EINS-R Rampenzyklusnummer'        ,,'',Z
+MM,AT,1, 670,1,1,,'EINS-R Duesenabstand'             ,,'mm',Z
+MM,AT,1, 680,1,1,,'EINS-R Ausblaszeit'               ,,'s',Z
+MM,AT,1, 690,1,1,,'EINS-R Gasart'                    ,,'',Z
+MM,AT,1, 700,1,1,,'EINS-R Gasdruck'                  ,,'bar',Z
+MM,AT,1, 710,1,1,,'EINS-R Oelspruehen'               ,,'',Z
+MM,AT,1, 720,1,1,,'ABDA Einstellmass'                ,,'mm',Z
+MM,AT,1, 730,1,1,,'ABDA Zeit'                        ,,'s',Z
+MM,AT,1, 740,1,1,,'ABDA Duesenabstand'               ,,'mm',Z
+MM,AT,1, 750,1,1,,'ABDA Laserleistung'               ,,'W',Z
+MM,AT,1, 760,1,1,,'ABDA Tastfrequenz'                ,,'Hz',Z
+MM,AT,1, 770,1,1,,'ABDA Geschwindigkeit'             ,,'m/min',Z
+MM,AT,1, 780,1,1,,'ABDA Gasart'                      ,,'',Z
+MM,AT,1, 790,1,1,,'ABDA Gasdruck'                    ,,'bar',Z
+MM,AT,1, 800,1,1,,'KENN Einstellmass'                ,,'mm',Z
+MM,AT,1, 810,1,1,,'KENN Duesenabstand'               ,,'mm',Z
+MM,AT,1, 820,1,1,,'KENN Laserleistung'               ,,'W',Z
+MM,AT,1, 830,1,1,,'KENN Tastfrequenz'                ,,'Hz',Z
+MM,AT,1, 840,1,1,,'KENN Geschwindigkeit'             ,,'m/min',Z
+MM,AT,1, 850,1,1,,'KENN Gasart'                      ,,'',Z
+MM,AT,1, 860,1,1,,'KENN Gasdruck'                    ,,'bar',Z
+MM,AT,1, 870,1,1,,'KOER-G Einstellmass'              ,,'mm',Z
+MM,AT,1, 880,1,1,,'KOER-G Duesenabstand'             ,,'mm',Z
+MM,AT,1, 890,1,1,,'KOER-G Laserleistung'             ,,'W',Z
+MM,AT,1, 900,1,1,,'KOER-G Tastfrequenz'              ,,'Hz',Z
+MM,AT,1, 910,1,1,,'KOER-G Geschwindigkeit'           ,,'m/min',Z
+MM,AT,1, 920,1,1,,'KOER-G Gasart'                    ,,'',Z
+MM,AT,1, 930,1,1,,'KOER-G Gasdruck'                  ,,'bar',Z
+MM,AT,1, 940,1,1,,'KOER-P Einstechzeit'              ,,'s',Z
+MM,AT,1, 950,1,1,,'KOER-P Rampenzyklusnummer'        ,,'',Z
+MM,AT,1, 960,1,1,,'KOER-P Duesenabstand'             ,,'mm',Z
+MM,AT,1, 970,1,1,,'KOER-P Gasart'                    ,,'',Z
+MM,AT,1, 980,1,1,,'KOER-P Gasdruck'                  ,,'bar',Z
+MM,AT,1, 990,1,1,,'PUNK Einstellmass'                ,,'mm',Z
+MM,AT,1,1000,1,1,,'PUNK-S Zeit'                      ,,'s',Z
+MM,AT,1,1010,1,1,,'PUNK-S Rampenzyklusnummer'        ,,'',Z
+MM,AT,1,1020,1,1,,'PUNK-S Duesenabstand'             ,,'mm',Z
+MM,AT,1,1030,1,1,,'PUNK-S Gasart'                    ,,'',Z
+MM,AT,1,1040,1,1,,'PUNK-S Gasdruck'                  ,,'bar',Z
+MM,AT,1,1050,1,1,,'PUNK-F Zeit'                      ,,'s',Z
+MM,AT,1,1060,1,1,,'PUNK-F Rampenzyklusnummer'        ,,'',Z
+MM,AT,1,1070,1,1,,'PUNK-F Duesenabstand'             ,,'mm',Z
+MM,AT,1,1080,1,1,,'PUNK-F Gasart'                    ,,'',Z
+MM,AT,1,1090,1,1,,'PUNK-F Gasdruck'                  ,,'bar',Z
+MM,AT,1,1100,1,1,,'TRUMPF-Kennung'                   ,,'',Z
+MM,AT,1,1110,1,1,,'Vorschub Anf. aus Stanzloch'      ,,'%',Z
+MM,AT,1,1120,1,1,,'SCHN-GR Einstellmass'             ,,'mm',Z
+MM,AT,1,1130,1,1,,'SCHN-MI Einstellmass'             ,,'mm',Z
+MM,AT,1,1140,1,1,,'SCHN-KL Einstellmass'             ,,'mm',Z
+MM,AT,1,1150,1,1,,'EINS-N Zeit SprintLas'            ,,'s',Z
+MM,AT,1,1160,1,1,,'SCHN hohe Beschleunigung'         ,,'m/s2',Z
+MM,AT,1,1730,1,1,,'PMS Aktiv'                        ,,'',Z
+MM,AT,1,1740,1,1,,'PMS-Schwellenwert 1'              ,,'',Z
+MM,AT,1,1750,1,1,,'PMS-Schwellenwert 2'              ,,'',Z
+MM,AT,1,1760,1,1,,'LLS - LFS Modus'                  ,,'',Z
+MM,AT,1,1770,1,1,,'LLS obere Grenze in %'            ,,'%',Z
+MM,AT,1,1780,1,1,,'Leistung bei oberer Grenze in %'  ,,'%',Z
+MM,AT,1,1790,1,1,,'LLS untere Grenze in %'           ,,'%',Z
+MM,AT,1,1800,1,1,,'Leistung bei unterer Grenze in %' ,,'%',Z
+MM,AT,1,1810,1,1,,'LFS obere Grenze in %'            ,,'%',Z
+MM,AT,1,1820,1,1,,'Frequenz bei oberer Grenze in %'  ,,'%',Z
+MM,AT,1,1830,1,1,,'LFS untere Grenze in %'           ,,'%',Z
+MM,AT,1,1840,1,1,,'Frequenz bei unterer Grenze in %' ,,'%',Z
+MM,AT,1,1850,1,1,,'Sensorik Einstechen normal'       ,,'',Z
+MM,AT,1,1860,1,1,,'Sensorik Einstechen sanft'        ,,'',Z
+MM,AT,1,1870,1,1,,'SCHN-GR Strahldurchmesser'        ,,'mm',Z
+MM,AT,1,1880,1,1,,'SCHN-MI Strahldurchmesser'        ,,'mm',Z
+MM,AT,1,1890,1,1,,'SCHN-KL Strahldurchmesser'        ,,'mm',Z
+MM,AT,1,1900,1,1,,'EINS Strahldurchmesser'           ,,'mm',Z
+MM,AT,1,1910,1,1,,'ABDA Strahldurchmesser'           ,,'mm',Z
+MM,AT,1,1920,1,1,,'KENN Strahldurchmesser'           ,,'mm',Z
+MM,AT,1,1930,1,1,,'KOER Strahldurchmesser'           ,,'mm',Z
+MM,AT,1,1940,1,1,,'PUNK Strahldurchmesser'           ,,'mm',Z
+C
+ZA,DA,1
+DA,'T2D-5390','244hs','01.09.01','','St37 3.0mm 5000W 5.0Z O2 TC16',1,0,
+*  'TC16',5000,'St37-30',3.000,5.000,'0.8',2,0.00,0.00,1.00,10.00,10.00,
+*  0.50,0.00,1,1,0.30,2500.00,10000.00,4.90,0.70,0.80,-1.00,-1.00,-1.00,
+*  -1.00,-1.00,-1.00,-1.00,-1.00,-1.00,-1.00,-1.00,-1.00,-1.00,-1.00,
+*  -1.00,-1.00,0.15,300.00,300.00,0.30,0.70,4.00,-1.00,-1.00,-1.00,-1.00,
+*  -1.00,-2.50,0.20,19,3.00,0.00,1,2.00,0,1.10,12,2.50,0.00,1,2.00,0,1.00,
+*  -1.00,-1.00,-1,-1,-1.00,-1,-1.00,-4.00,8.00,50,100,3.00,1,2.00,1.00,
+*  2.00,90,1000,0.45,1,2.00,0.50,5,1.50,1,1.30,1.00,0.30,13,6.00,1,0.00,
+*  0.50,16,8.00,1,0.00,1,0,1.00,1.00,0.00,0.15,17.00,0,-1,-1,0,100.00,
+*  100.00,0.00,100.00,100.00,100.00,0.00,100.00,1,1,14.00,14.00,14.00,
+*  14.00,14.00,14.00,14.00,14.00
+C
+ENDE_LTT_STAMM
+C
+BEGIN_LTT_CALLS
+C
+ZA,MM,1
+MM,AT,1,  10,1,1,,'Tabellenidentifikator'            ,,'',T
+C
+ZA,DA,1
+DA,'T2D-5390'
+C
+ENDE_LTT_CALLS
+C
+BEGIN_PARTS_IN_PROGRAM
+C
+ZA,MM,15
+MM,AT,1,  10,1,1,,'Hauptprogrammname'                ,,'',T
+MM,AT,1,  20,1,1,,'reserviert'                       ,,'',T
+MM,AT,1,  30,1,1,,'Teil-Identnummer'                 ,,'',T
+MM,AT,1,  40,1,1,,'reserviert'                       ,,'',Z
+MM,AT,1,  50,1,1,,'Geometriefilename'                ,,'',T
+MM,AT,1,  60,1,1,,'Anzahl'                           ,,'',Z
+MM,AT,1,  70,1,1,,'Geometriefilename (einf.Darstl)'  ,,'',T
+MM,AT,1,  80,1,1,,'Bearbeitungszeit'                 ,,'min',Z
+MM,AT,1,  90,1,1,,'Flaeche'                          ,,'mm2',Z
+MM,AT,1, 100,1,1,,'ToPs-Zeichnungskunde'             ,,'',T
+MM,AT,1, 110,1,1,,'ToPs-Teile-Nummerierung'          ,,'',T
+MM,AT,1, 120,1,1,,'ToPs-Zeichnungsname'              ,,'',T
+MM,AT,1, 130,1,1,,'Abmessung X'                      ,,'mm',Z
+MM,AT,1, 140,1,1,,'Abmessung Y'                      ,,'mm',Z
+MM,AT,1, 500,1,1,,'TRUMPF-Kennung'                   ,,'',Z
+C
+ZA,DA,1
+DA,'ALREPA_15T12_3MM_1',0,'',0,
+*  'L:\CAD\A\ALREPA\2005\15_12\3MMSS\UST_KAPAK.GEO',10,'UST_KAPAK',0.40,
+*  69974.19,'',1,'',533.00,180.84,1
+C
+ENDE_PARTS_IN_PROGRAM
+C
+BEGIN_PARTS_IN_PROGRAM_POS
+C
+ZA,MM,11
+MM,AT,1,  10,1,1,,'laufende Nummer gefertigtes Teil' ,,'',Z
+MM,AT,1,  20,1,1,,'Hauptprogrammname'                ,,'',T
+MM,AT,1,  30,1,1,,'Teil-Identnummer'                 ,,'',T
+MM,AT,1,  60,1,1,,'Position X-Koordinate'            ,,'mm',Z
+MM,AT,1,  70,1,1,,'Position Y-Koordinate'            ,,'mm',Z
+MM,AT,1,  80,1,1,,'Abmessung in X'                   ,,'mm',Z
+MM,AT,1,  90,1,1,,'Abmessung in Y'                   ,,'mm',Z
+MM,AT,1, 100,1,1,,'Winkellage'                       ,,'deg',Z
+MM,AT,1, 150,1,1,,'X-Koordinate Schwerpunkt'         ,,'mm',Z
+MM,AT,1, 160,1,1,,'Y-Koordinate Schwerpunkt'         ,,'mm',Z
+MM,AT,1, 500,1,1,,'TRUMPF-Kennung'                   ,,'',Z
+C
+ZA,DA,10
+DA,1,'ALREPA_15T12_3MM_1','',6.00,6.00,533.00,180.84,0.00,272.50,96.43,1
+DA,2,'ALREPA_15T12_3MM_1','',6.00,192.84,533.00,180.84,0.00,272.50,283.27,
+*  1
+DA,3,'ALREPA_15T12_3MM_1','',6.00,379.68,533.00,180.84,0.00,272.50,470.11,
+*  1
+DA,4,'ALREPA_15T12_3MM_1','',513.16,65.80,533.00,180.84,0.00,779.66,
+*  156.23,1
+DA,5,'ALREPA_15T12_3MM_1','',513.16,252.64,533.00,180.84,0.00,779.66,
+*  343.07,1
+DA,6,'ALREPA_15T12_3MM_1','',513.16,439.49,533.00,180.84,0.00,779.66,
+*  529.91,1
+DA,7,'ALREPA_15T12_3MM_1','',513.16,626.33,533.00,180.84,0.00,779.66,
+*  716.75,1
+DA,8,'ALREPA_15T12_3MM_1','',513.16,813.17,533.00,180.84,0.00,779.66,
+*  903.60,1
+DA,9,'ALREPA_15T12_3MM_1','',6.00,566.53,533.00,180.84,0.00,272.50,656.95,
+*  1
+DA,10,'ALREPA_15T12_3MM_1','',6.00,753.37,533.00,180.84,0.00,272.50,
+*  843.79,1
+C
+ENDE_PARTS_IN_PROGRAM_POS
+C
+BEGIN_MICROJOINT
+C
+ZA,MM,12
+MM,AT,1,  10,1,1,,'Tabellenidentifikator'            ,,'',T
+MM,AT,1, 100,1,1,,'programmierte Microjoints aktiv'  ,,'Bool',Z
+MM,AT,1, 110,1,1,,'automatische Microjoints aktiv'   ,,'Bool',Z
+MM,AT,1, 120,1,1,,'Microjointbreite kleine Kontur'   ,,'mm',Z
+MM,AT,1, 130,1,1,,'Microjointbreite mittlere Kontur' ,,'mm',Z
+MM,AT,1, 140,1,1,,'Microjointbreite grosse Kontur'   ,,'mm',Z
+MM,AT,1, 150,1,1,,'Konturausdehnung min X autom. Microjoint',,'mm',Z
+MM,AT,1, 160,1,1,,'Konturausdehnung max X autom. Microjoint',,'mm',Z
+MM,AT,1, 170,1,1,,'Konturausdehnung min Y autom. Microjoint',,'mm',Z
+MM,AT,1, 180,1,1,,'Konturausdehnung max Y autom. Microjoint',,'mm',Z
+MM,AT,1, 190,1,1,,'Einstechart nach Microjoint'      ,,'',Z
+MM,AT,1, 500,1,1,,'TRUMPF-Kennung'                   ,,'',Z
+C
+ZA,DA,1
+DA,'MIJO-1',0,0,0.00,0.00,0.00,-1.00,-1.00,-1.00,-1.00,11,1
+C
+ENDE_MICROJOINT
+C
+BEGIN_PROGRAMM
+C
+ZA,MM,4
+MM,AT,1,  10,1,1,,'Programmnummer'                   ,,'',T
+MM,AT,1,  20,1,1,,'Programmtyp'                      ,,'',T
+MM,AT,1,  30,1,1,,'Bemerkung'                        ,,'',T
+MM,AT,1,  40,1,1,,'Bearbeitungszeit'                 ,,'min',Z
+C
+ZA,DA,3
+DA,'SP1ALREPA_15T12_3MM_1','UP','',
+START_TEXT
+N10 MSG("SUB-PROGRAM NO.,SP1ALREPA_15T12_3MM_1")
+N20G91
+N30;(PART NUMBER: 1 )
+N40TC_POS_LEVEL(40.0)
+N50TC_LASER_ON(9,"T2D-5390",10,100);SPRINTLAS
+N60X1.467Y-1.819
+N70G03X0.371Y-0.019I0.195J0.157
+N80G03I-1.838J1.838
+N90TC_LASER_OFF(3);SPRINTLAS_ENDE
+N100G01X-1.838Y41.020
+N110TC_LASER_ON(9,"T2D-5390",10,100);SPRINTLAS
+N120X1.467Y-1.818
+N130G03X0.371Y-0.020I0.195J0.157
+N140G03I-1.838J1.838
+N150TC_LASER_OFF(3);SPRINTLAS_ENDE
+N160G01X22.779Y-19.792
+N170TC_LASER_ON(9,"T2D-5390",10,100);SPRINTLAS
+N180X3.421Y-3.647
+N190G03X0.359Y-0.006I0.182J0.171
+N200G03I-5.692J5.692
+N210TC_LASER_OFF(3);SPRINTLAS_ENDE
+N220G01X419.217Y3.653
+N230TC_LASER_ON(9,"T2D-5390",10,100);SPRINTLAS
+N240X3.421Y-3.647
+N250G03X0.359Y-0.006I0.182J0.171
+N260G03I-5.692J5.692
+N270TC_LASER_OFF(3);SPRINTLAS_ENDE
+N280G01X17.012Y25.283
+N290TC_LASER_ON(9,"T2D-5390",10,100);SPRINTLAS
+N300X1.467Y-1.818
+N310G03X0.372Y-0.020I0.195J0.157
+N320G03I-1.838J1.838
+N330TC_LASER_OFF(3);SPRINTLAS_ENDE
+N340G01X-1.839Y-37.344
+N350TC_LASER_ON(9,"T2D-5390",10,100);SPRINTLAS
+N360X1.467Y-1.819
+N370G03X0.372Y-0.019I0.195J0.157
+N380G03I-1.838J1.838
+N390TC_LASER_OFF(3);SPRINTLAS_ENDE
+N400G01X-414.992Y85.769
+N410TC_LASER_ON(9,"T2D-5390",10,100);SPRINTLAS
+N420X1.704Y-4.701
+N430G03X0.320Y-0.150I0.235J0.085
+N440G02X383.237Y-11.678I176.926J-488.011
+N450G01X34.159Y-14.908
+N460X3.314Y-1.379
+N470X3.114Y-1.499
+N480X2.902Y-1.580
+N490X2.688Y-1.627
+N500X2.471Y-1.638
+N510X2.251Y-1.615
+N520X2.029Y-1.558
+N530X1.803Y-1.465
+N540X1.577Y-1.340
+N550X2.818Y-2.622
+N560X0.997Y-1.629
+N570G02X0.073Y-0.230I-0.426J-0.261
+N580G01X0.142Y-2.295
+N590Y-24.740
+N600X-0.142Y-2.295
+N610G02X-0.073Y-0.230I-0.499J0.031
+N620G01X-0.997Y-1.629
+N630X-2.818Y-2.623
+N640X-1.577Y-1.339
+N650X-1.803Y-1.466
+N660X-2.029Y-1.557
+N670X-2.251Y-1.615
+N680X-2.471Y-1.639
+N690X-2.688Y-1.626
+N700X-2.902Y-1.580
+N710X-3.114Y-1.499
+N720X-3.314Y-1.379
+N730X-34.159Y-15.020
+N740G02X-412.622I-206.311J476.333
+N750G01X-34.159Y15.020
+N760X-3.314Y1.379
+N770X-3.114Y1.499
+N780X-2.902Y1.580
+N790X-2.688Y1.626
+N800X-2.471Y1.639
+N810X-2.251Y1.615
+N820X-2.029Y1.557
+N830X-1.803Y1.466
+N840X-1.577Y1.339
+N850X-2.818Y2.623
+N860X-0.997Y1.629
+N870G02X-0.073Y0.230I0.426J0.261
+N880G01X-0.142Y2.295
+N890Y24.740
+N900X0.142Y2.295
+N910G02X0.073Y0.230I0.499J-0.031
+N920G01X0.997Y1.629
+N930X2.818Y2.622
+N940X1.577Y1.340
+N950X1.803Y1.465
+N960X2.029Y1.558
+N970X2.251Y1.615
+N980X2.471Y1.638
+N990X2.688Y1.627
+N1000X2.902Y1.580
+N1010X3.114Y1.499
+N1020X3.314Y1.379
+N1030X34.159Y14.908
+N1040G02X29.385Y11.678I206.311J-476.333
+N1050TC_LASER_OFF(3);SPRINTLAS_ENDE
+N1060G01
+N1070G90
+N1080M17
+N1090M02
+STOP_TEXT
+DA,'SP2ALREPA_15T12_3MM_1','UP','',
+START_TEXT
+N10 MSG("SUB-PROGRAM NO.,SP2ALREPA_15T12_3MM_1")
+N20G91
+N30;(PART NUMBER: 101 )
+N40TC_SHEET_THICK();BLECHDICKE_MESSEN
+N50Y-23.000
+N60TC_LASER_ON(6,"T2D-5390",0,100);SCHNEIDENONLY
+N70Y3.000
+N80Y10.000
+N90TC_LASER_ON(5,"T2D-5390",0,100);LTT2
+N100Y980.000G822
+N110TC_LASER_ON(6,"T2D-5390",0,100);LTT2
+N120Y10.000
+N130Y3.000G822
+N140TC_LASER_OFF(1);SCHNEIDENENDE
+N150G01
+N160G90
+N170M17
+N180M02
+STOP_TEXT
+DA,'ALREPA_15T12_3MM_1','HP','',
+START_TEXT
+N10 MSG("MAIN PROGRAM NO.:,ALREPA_15T12_3MM_1")
+N20 MSG("TOPS 100 V5.02 B222.0 - L3050 - SIEMENS")
+N30 MSG("SHEET DIMENSIONS 3.00 X 1060.00 X 1000.00 ")
+N40G71
+N50F282000
+N60TC_MICROJOINT("MIJO-1")
+N70;(FILE NAME: L:\CAD\A\ALREPA\2005\15_12\3MMSS\ALREPA_15T12_3MM_1.LST)
+N80;(TRANSFERNAME: ALREPA_15T12_3MM_1.LST PROGRAMME RUNS: 1)
+N90;(MACHINE: L3050 TYPE: 1)
+N100;(CONTROL: SIN 840D VERSION:)
+N110TC_POS_LEVEL(40.0)
+N120TC_SHEET_TECH("SHT-1");BLECHLAGE
+N130TC_SHEET_LOAD("SHL-1")
+N140;GOTOF ENTRY_LASER
+N150;ENTRY_LASER:
+N160;(PART NUMBER: 1 CONSECUTIVE NUMBER: 1 )
+N170X38.296Y76.830
+N180SP1ALREPA_15T12_3MM_1
+N190;ENTRY_LASER:
+N200;(PART NUMBER: 1 CONSECUTIVE NUMBER: 2 )
+N210X38.296Y263.672
+N220SP1ALREPA_15T12_3MM_1
+N230;ENTRY_LASER:
+N240;(PART NUMBER: 1 CONSECUTIVE NUMBER: 3 )
+N250X38.296Y450.515
+N260SP1ALREPA_15T12_3MM_1
+N270;ENTRY_LASER:
+N280;(PART NUMBER: 1 CONSECUTIVE NUMBER: 4 )
+N290X545.452Y136.631
+N300SP1ALREPA_15T12_3MM_1
+N310;ENTRY_LASER:
+N320;(PART NUMBER: 1 CONSECUTIVE NUMBER: 5 )
+N330X545.452Y323.474
+N340SP1ALREPA_15T12_3MM_1
+N350;ENTRY_LASER:
+N360;(PART NUMBER: 1 CONSECUTIVE NUMBER: 6 )
+N370X545.452Y510.316
+N380SP1ALREPA_15T12_3MM_1
+N390;ENTRY_LASER:
+N400;(PART NUMBER: 1 CONSECUTIVE NUMBER: 7 )
+N410X545.452Y697.158
+N420SP1ALREPA_15T12_3MM_1
+N430;ENTRY_LASER:
+N440;(PART NUMBER: 1 CONSECUTIVE NUMBER: 8 )
+N450X545.452Y884.000
+N460SP1ALREPA_15T12_3MM_1
+N470;ENTRY_LASER:
+N480;(PART NUMBER: 1 CONSECUTIVE NUMBER: 9 )
+N490X38.296Y637.357
+N500SP1ALREPA_15T12_3MM_1
+N510;ENTRY_LASER:
+N520;(PART NUMBER: 1 CONSECUTIVE NUMBER: 10 )
+N530X38.296Y824.199
+N540SP1ALREPA_15T12_3MM_1
+N550;ENTRY_LASER:
+N560;(PART NUMBER: 101 CONSECUTIVE NUMBER: 1 )
+N570X1054.154Y20.000
+N580SP2ALREPA_15T12_3MM_1
+N590TC_LASER_OFF(2)
+N600M30
+STOP_TEXT
+ENDE_PROGRAMM
+ED
+
