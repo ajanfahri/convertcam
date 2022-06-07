@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CAM CONVERT</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script type="module" src="index.js"></script>
+<style>
+  .column {
+  float: left;
+  width: 50%;
+  padding:10px;
+}
+table,tr,td{
+  border-bottom:1px solid #a5a2a2;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+hr{
+  border-top: 1px solid rgb(77, 73, 73);
+  margin:3px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container-fluid">
+
+  <form name="uploadForm" style="margin-top:30px;margin-bottom:30px;">
+    <div>
+      <input id="uploadInput" type="file" name="myFiles" accept=".cam">
+    </div>
+  </form>
+
+<div class="row" >
+ <div class="column"> 
+  <label id="orjinalFile" for="w3review">Original File:</label>
+<br>
+  <textarea id="sourceFileText" name="sourceFileText" rows="40" cols="70">
+  Select Cam File
+  </textarea>
+</div>
+
+
+
+<div class="column" >
+ 
+  <label for="w3review">Converted File:</label>
+  <br>
+
+  <textarea id="convertedFileText" name="convertedFileText" rows="40" cols="70">
+
+</textarea>
+
+</div>
+</div>
+</div>
+
+<button id="convert" class="button danger">CONVERT</button>
+
+
+
+</body>
+</html>
