@@ -11,7 +11,7 @@ function updateSize() {
   document.getElementById("orjinalFile").innerHTML = oFiles[0].name + " "+nFiles + " " + sOutput;
   document.getElementById('convertedFileText').innerHTML="";
   var fr=new FileReader();
-
+  Cizgiler = new Array();
   fr.onload=function(){
       document.getElementById('sourceFileText').innerHTML=fr.result;
       var lines = fr.result.split('\n');
@@ -49,12 +49,13 @@ function convert(line){
 function ciz(){
   const canvas = document.getElementById('my-canvas');
   const ctx = canvas.getContext('2d');
+  ctx.clearRect(0, 0, canvas.width , canvas.height);
       // Set line width
     ctx.lineWidth = 5;
-
+    ctx.restore();
     // Wall
     /*ctx.strokeRect(75, 140, 150, 110);
-
+    
     // Door
     ctx.fillRect(130, 190, 40, 60);*/
 
