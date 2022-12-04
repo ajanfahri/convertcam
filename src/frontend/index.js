@@ -1,5 +1,7 @@
 import Line from './line.js';
+import Rectangle from './rectangle.js';
 import Shape from './shape.js';
+import Circle from './circle.js';
 
 //let Cizgiler = new Array();
 let shape= new Shape();
@@ -15,7 +17,7 @@ function updateSize() {
   document.getElementById('convertedFileText').innerHTML="";
   var fr=new FileReader();
   //Cizgiler = new Array();
-  shape.emptyCizik;
+  shape.clearShapes();
   fr.onload=function(){
       document.getElementById('sourceFileText').innerHTML=fr.result;
       var lines = fr.result.split('\n');
@@ -44,36 +46,64 @@ function convert(line){
   regex = /F(\d+)/;f = line.match(regex);if(f)str += f[0]+" ";
   console.log(endx);
   ///Cizgiler.push(new Line(startx,starty,endx,endy));
-  shape.cizikekle(new Line(startx,starty,endx,endy));
+  shape.addLine(new Line(startx,starty,endx,endy));
   startx=endx;starty=endy;
   if(str.length>0)str += '\n';
   return str;
 }
 
-
+function yaz(){
+  alert("TEst");
+}
 function ciz(){
   const canvas = document.getElementById('my-canvas');
   const ctx = canvas.getContext('2d');
   ctx.clearRect(0, 0, canvas.width , canvas.height);
       // Set line width
-    ctx.lineWidth = 5;
+    ctx.lineWidth = 1;
     ctx.restore();
-    // Wall
-    /*ctx.strokeRect(75, 140, 150, 110);
     
-    // Door
-    ctx.fillRect(130, 190, 40, 60);*/
-
-    // Roof
     ctx.beginPath();
-    //ctx.moveTo(50, 140)
-    //Cizgiler.forEach(item => ctx.lineTo(item.endx, item.endy));
-    shape.ciz(ctx);
-    /*ctx.moveTo(50, 140);
-    ctx.lineTo(150, 60);
-    ctx.lineTo(250, 140);*/
+    
+    shape.drawShapes(ctx);
+    
     ctx.closePath();
     ctx.stroke();
 
 }
 
+
+ function Degerleri_Yenile(){
+  shape.emptyCizik;
+  document.getElementById('convertedFileText').innerHTML="";
+ }
+ function Cizgileri_Olustur(source){
+  var lines = source.split('\n');
+      console.log(lines);
+      for(var line = 0; line < lines.length; line++){
+        document.getElementById('convertedFileText').innerHTML+=convert(lines[line]);
+      }
+ }
+
+
+
+ //Eventler
+ document.getElementById('sourceFileText').onkeydown=function() { 
+  Degerleri_Yenile();
+  Cizgileri_Olustur(document.getElementById('sourceFileText').value);
+  ciz();
+ }
+
+ document.getElementById('kare').onclick=function() { 
+  shape.addRectangle(new Rectangle(Math.floor(Math.random() * 100),Math.floor(Math.random() * 100),Math.floor(Math.random() * 100),Math.floor(Math.random() * 100)));
+  ciz();
+ }
+ document.getElementById('circle').onclick=function() { 
+  shape.addCircle(new Circle(Math.floor(Math.random() * 100),Math.floor(Math.random() * 100),Math.floor(Math.random() * 100)));
+  ciz();
+ }
+
+ document.getElementById('temizle').onclick=function() { 
+  shape.clearShapes();
+  ciz();
+ }

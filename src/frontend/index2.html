@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CAM CONVERT</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script type="module" src="index.js"></script>
+<style>
+  .column {
+  float: left;
+  width: 50%;
+  padding:10px;
+}
+table,tr,td{
+  border-bottom:1px solid #a5a2a2;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+hr{
+  border-top: 1px solid rgb(77, 73, 73);
+  margin:3px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container-fluid">
+
+  <form name="uploadForm" style="margin-top:30px;margin-bottom:30px;">
+    <div>
+      <input id="uploadInput" type="file" name="myFiles" accept=".cam">
+    </div>
+  </form>
+
+<div class="row" style="width:100%;">
+ <div class="column" style="width:40%"> 
+  <label id="orjinalFile" for="w3review">Original File:</label>
+  <br>
+    <textarea id="sourceFileText" 
+    name="sourceFileText" rows="10" style="width:100%;height:50%;">
+      Select Cam File
+      </textarea>
+    <textarea id="convertedFileText" rows="10"  style="width:100%;height:50%;"
+    name="convertedFileText" >
+      </textarea>
+
+ </div>
+
+
+
+  <div class="column"  >
+    <button id="kare">Kare</button><button id="circle">Circle</button><button id="temizle">Temizle</button>
+      Preview<br>
+      <canvas style="margin:10px;padding:10px;border:1px solid rgb(163, 97, 97);" id="my-canvas" 
+      width="400" height="400"
+      ></canvas>
+  </div>
+</div>
+
+</div>
+
+
+
+
+</body>
+</html>
