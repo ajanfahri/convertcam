@@ -1,7 +1,7 @@
-import Line from './line.js';
-import Rectangle from './rectangle.js';
-import Shape from './shape.js';
-import Circle from './circle.js';
+import Line from './objects/line.js';
+import Rectangle from './objects/rectangle.js';
+import Shape from './objects/shape.js';
+import Circle from './objects/circle.js';
 
 //let Cizgiler = new Array();
 let shape= new Shape();
@@ -59,17 +59,10 @@ function ciz(){
   const canvas = document.getElementById('my-canvas');
   const ctx = canvas.getContext('2d');
   ctx.clearRect(0, 0, canvas.width , canvas.height);
-      // Set line width
-    ctx.lineWidth = 1;
-    ctx.restore();
+  ctx.lineWidth = 1;
+  ctx.restore();
+  shape.drawShapes(ctx);
     
-    ctx.beginPath();
-    
-    shape.drawShapes(ctx);
-    
-    ctx.closePath();
-    ctx.stroke();
-
 }
 
 
@@ -102,8 +95,19 @@ function ciz(){
   shape.addCircle(new Circle(Math.floor(Math.random() * 100),Math.floor(Math.random() * 100),Math.floor(Math.random() * 100)));
   ciz();
  }
+ document.getElementById('line').onclick=function() { 
+  shape.addLine(new Line(Math.floor(Math.random() * 100),Math.floor(Math.random() * 100),Math.floor(Math.random() * 100),Math.floor(Math.random() * 100)));
+  ciz();
+ }
 
  document.getElementById('temizle').onclick=function() { 
   shape.clearShapes();
+  ciz();
+ }
+
+ document.getElementById('my-canvas').onclick=function(e) { 
+  var rect = document.getElementById('my-canvas').getBoundingClientRect();
+  shape.setSelected(false);
+  shape.selectObject(e.clientX-rect.left,e.clientY-rect.top,0,0,1);
   ciz();
  }
