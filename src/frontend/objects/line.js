@@ -70,6 +70,11 @@ class Line {
     ctx.stroke();
    }
    
+   MoveToObject(ShiftX,ShiftY) {
+    this.xn1-=ShiftX;this.yn1+=ShiftY;
+    this.xn2-=ShiftX;this.yn2+=ShiftY;
+}
+
 }
 
 export default Line;

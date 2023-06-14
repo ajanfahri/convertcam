@@ -62,7 +62,11 @@ class Circle {
     ctx.arc(this.xc, this.yc, this.radius,0,2*Math.PI,true)
     ctx.stroke();
    }  
-   
+ 
+   MoveToObject( ShiftX,  ShiftY) {
+    this.xc-=ShiftX;this.yc+=ShiftY;
+    
+}
 }
 
 export default Circle;

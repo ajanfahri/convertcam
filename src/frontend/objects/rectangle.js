@@ -37,7 +37,11 @@ class Rectangle {
     this.lines.forEach(item => item.draw(ctx));
   } 
 
-
+  MoveToObject( ShiftX, ShiftY) {
+    //console.log("burda");}
+    for(let j=0;j<this.lines.length;j++)
+        this.lines[j].MoveToObject(ShiftX,ShiftY);
+    }
 }
 
 export default Rectangle;

@@ -4,6 +4,7 @@ class Shape {
   constructor() {
     this.selectNo=0;
     this.shapes = new Array();
+    this.secilen = -1;
   }
 
   addLine(line){
@@ -20,13 +21,14 @@ class Shape {
 
   clearShapes(){
     this.shapes=new Array();
+    this.secilen=-1;
   }
 
   selectObject(px,py,CX,CY,Scale){
-   let secilen =-1;
+   
     for(let i=0;i< this.shapes.length;i++){
       if(this.shapes[i].select(px,py,CX,CY,Scale)){
-        secilen = i;
+        this.secilen = i;
         break;
       }
     }
@@ -35,10 +37,19 @@ class Shape {
   setSelected(select){
     this.shapes.forEach(item => item.setSelected(select));
   }
+  isSelected(){
+    if (this.secilen == -1) return false; else return true;
+  }
   drawShapes(ctx){
     this.shapes.forEach(item => item.draw(ctx,false));
   }
 
+  MoveSelectedObject( ShiftX, ShiftY) {
+     this.shapes[this.secilen].MoveToObject(ShiftX,ShiftY);
+     /*if(this.shapes[this.secilen] instanceof Line)      this.shapes[this.secilen].MoveToObject(ShiftX,ShiftY);
+else if(this.shapes[this.secilen] instanceof Rectangle) this.shapes[this.secilen].MoveToObject(ShiftX,ShiftY);
+else if(this.shapes[this.secilen] instanceof Circle)    this.shapes[this.secilen].MoveToObject(ShiftX,ShiftY);*/
+}
 
 }
 
